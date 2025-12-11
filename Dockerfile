@@ -5,6 +5,7 @@ FROM runpod/worker-comfyui:5.6.0-base
 # (no custom registry-verified nodes in workflow)
 RUN comfy node install comfyui-easy-use
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git /workspace/ComfyUI/custom_nodes/ComfyUI-load-image-from-url
+RUN touch /workspace/ComfyUI/custom_nodes/ComfyUI-load-image-from-url/__init__.py
 RUN pip install -r /workspace/ComfyUI/custom_nodes/ComfyUI-load-image-from-url/requirements.txt || true
 
 # download models into comfyui
