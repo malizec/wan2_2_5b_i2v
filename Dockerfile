@@ -4,8 +4,7 @@ FROM runpod/worker-comfyui:5.6.0-base-cuda12.8.1
 # install custom nodes into comfyui
 # (no custom registry-verified nodes in workflow)
 RUN comfy node install comfyui-easy-use
-RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git /runpod-volume/custom_nodes/ComfyUI-load-image-from-url
-RUN cd /runpod-volume/custom_nodes/ComfyUI-load-image-from-url; pip install -r requirements.txt -vvv || true
+RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git /comfyui/custom_nodes/ComfyUI-load-image-from-url
 
 # download models into comfyui
 RUN comfy model download --url https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors --relative-path models/diffusion_models --filename wan2.2_ti2v_5B_fp16.safetensors
@@ -18,5 +17,7 @@ RUN pwd
 RUN ls -lah /
 RUN ls -lah /runpod-volume/
 RUN ls -lah /runpod-volume/custom_nodes
+RUN ls -lah /runpod-volume/models/diffusion_models
+RUN ls -lah /comfyui/
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
