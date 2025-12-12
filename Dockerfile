@@ -5,7 +5,7 @@ FROM runpod/worker-comfyui:5.6.0-base
 # (no custom registry-verified nodes in workflow)
 RUN comfy node install comfyui-easy-use
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git /runpod-volume/custom_nodes/ComfyUI-load-image-from-url
-RUN pip install -r /runpod-volume/custom_nodes/ComfyUI-load-image-from-url/requirements.txt || true
+RUN cd /runpod-volume/custom_nodes/ComfyUI-load-image-from-url; pip install -r requirements.txt -vvv || true
 
 # download models into comfyui
 RUN comfy model download --url https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors --relative-path models/diffusion_models --filename wan2.2_ti2v_5B_fp16.safetensors
