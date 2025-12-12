@@ -14,5 +14,7 @@ RUN comfy model download --url https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_
 
 RUN comfy model download --url https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors --relative-path models/vae --filename wan2.2_vae.safetensors
 
+RUN pwd
+RUN ls -lah /
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
