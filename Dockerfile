@@ -16,5 +16,7 @@ RUN comfy model download --url https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_
 
 RUN pwd
 RUN ls -lah /
+RUN ls -lah /runpod-volume/
+RUN ls -lah /runpod-volume/custom_nodes
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
