@@ -17,7 +17,6 @@ RUN pwd
 RUN ls -lah /
 RUN ls -lah /runpod-volume/
 RUN ls -lah /runpod-volume/custom_nodes
-RUN ls -lah /runpod-volume/models/diffusion_models
 RUN ls -lah /comfyui/
 RUN ls -lah /comfyui/custom_nodes
 RUN ls -lah /comfyui/models/diffusion_models
