@@ -19,5 +19,7 @@ RUN ls -lah /runpod-volume/
 RUN ls -lah /runpod-volume/custom_nodes
 RUN ls -lah /runpod-volume/models/diffusion_models
 RUN ls -lah /comfyui/
+RUN ls -lah /comfyui/custom_nodes
+RUN ls -lah /comfyui/models/diffusion_models
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
