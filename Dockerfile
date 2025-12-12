@@ -15,8 +15,6 @@ RUN comfy model download --url https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_
 
 RUN pwd
 RUN ls -lah /
-RUN ls -lah /runpod-volume/
-RUN ls -lah /runpod-volume/custom_nodes
 RUN ls -lah /comfyui/
 RUN ls -lah /comfyui/custom_nodes
 RUN ls -lah /comfyui/models/diffusion_models
