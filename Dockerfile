@@ -5,6 +5,7 @@ FROM runpod/worker-comfyui:5.6.0-base-cuda12.8.1
 # (no custom registry-verified nodes in workflow)
 # 1. Install comfyui-easy-use
 RUN comfy node install comfyui-easy-use
+RUN comfy node install comfy-mtb
 # 2. Install dependencies (the .bat file is irrelevant on Linux)
 RUN pip install -r /comfyui/custom_nodes/comfyui-easy-use/requirements.txt
 
